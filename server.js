@@ -2,7 +2,7 @@ var net = require('net');
 var url = require('url');
 var http = require('http');
 
-var hdr = "HTTP/1.1 200 OK" + "\n" + "Server-Name : Keahi" + "\n" + new Date() + "\n\n\n";
+var hdr = "HTTP/1.1 200 OK" + "\n" + "Server-Name : Keahi" + "\n" + new Date().toUTCString() + "\n\n\n";
 var server = net.createServer(function(socket){
   //sockets.push(socket);
 console.log('connected');
